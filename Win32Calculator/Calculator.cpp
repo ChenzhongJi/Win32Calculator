@@ -166,8 +166,6 @@ LRESULT MainWindow::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
         PAINTSTRUCT ps;
         // 使无效的客户区变的有效，并取得设备环境句柄
         hdc = BeginPaint(m_hwnd, &ps);
-        HBRUSH hbrush = CreateSolidBrush(RGB(0, 255, 0));
-        SelectObject(hdc, hbrush);
         EndPaint(m_hwnd, &ps);
         break;
     }
